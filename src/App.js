@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { ThemeProvider } from "@material-ui/core/styles";
+import SearchAppBar from './components/Appbar';
+import Godfather from './components/Godfather';
+import Matrix from './components/Matrix';
+import Revenant from './components/Revenant';
+import Rocky from './components/Rocky';
+import Welcome from './components/Welcome';
+import Fade from 'react-reveal/Fade';
+import Fightclub from './components/Fightclub';
+import Dune from './components/Dune';
+import Goodfellas from './components/Goodfellas';
+import Intestellar from './components/Intestellar';
+import Footer from './Footer';
+// import Table from './components/Table';
+// import { MyComponent } from './components/api';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          {/* <ThemeProvider theme={customtheme}> */}
+      <SearchAppBar />
+      {/* </ThemeProvider> */}
+      <Fade botton big distance='20%' duration={2500}>
+      <Welcome/>
+      <Rocky/>
+      <Goodfellas/>
+      <Godfather/>
+      <Matrix/>
+      <Revenant/>
+      <Fightclub/>
+      <Intestellar/>
+      <Dune/>
+      </Fade>
+      <Footer/>
     </div>
   );
 }
